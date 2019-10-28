@@ -44,9 +44,17 @@ nav a {
 }
 
 section {
-    padding-block: 25px;
+    padding-block-end: 25px;
 }
 
+#contact a {
+    color: white;
+}
+
+#icons {
+    display: flex;
+    justify-content: space-between;
+}
 
 #main-footer {
     padding: 50px;
