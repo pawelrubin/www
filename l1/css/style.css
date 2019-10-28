@@ -1,6 +1,52 @@
-html, body {     
-    font-family: 'Cormorant Garamond', serif;
+:root {
+    --background-color: #18121E;
+    --primary-color: #233237;
+    --secondary-color: #EAC67A;
+}
+
+body {     
+    font-family: 'EB Garamond', serif;
     margin: 0;
     padding: 0;
     height: 100%;
+    scroll-behavior: smooth;
+    display: flex;
+    background-color: var(--background-color);
+    color: white;
+    font-size: 20px;
+}
+
+
+header {
+    padding: 50px;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header p {
+    font-size: 25px;
+}
+
+nav {
+    overflow: hidden;
+    padding-inline: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+}
+
+section {
+    padding: 50px;
+}
+
+
+#main-footer {
+    padding: 50px;
+    text-align: center;
 }
