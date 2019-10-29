@@ -1,62 +1,67 @@
 :root {
-    --background-color: #18121E;
-    --primary-color: #233237;
-    --secondary-color: #EAC67A;
+  --background-color: #18121e;
+  --primary-color: #233237;
+  --secondary-color: #eac67a;
 }
 
-body {     
-    font-family: 'EB Garamond', serif;
-    margin: 0;
-    padding-inline: 50px;
-    height: 100%;
-    scroll-behavior: smooth;
-    display: flex;
-    background-color: var(--background-color);
-    color: white;
-    font-size: 20px;
+body {
+  font-family: "EB Garamond", serif;
+  margin: 0;
+  padding-inline: 50px;
+  height: 100%;
+  scroll-behavior: smooth;
+  display: flex;
+  background-color: var(--background-color);
+  color: white;
 }
 
-
-header {
-    justify-content: space-between;
+main {
+  min-inline-size: 0;
 }
 
-header h1 {
-    font-size: 60px;
-}
-
-header p {
-    font-size: 25px;
+#title h1 {
+  border-bottom: 3px solid var(--secondary-color);
+  width: max-content;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    padding-block: 10px;
-
-    display: flex;
-    justify-content: space-around;
-    background-color: var(--background-color);
+  position: sticky;
+  top: 0;
+  padding-block: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--background-color);
 }
 
 nav a {
-    color: white;
+  color: white;
 }
 
 section {
-    padding-block-end: 25px;
+  padding-block-end: 25px;
+}
+
+section header h2 {
+    width: max-content;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 #contact a {
-    color: white;
+  color: white;
 }
 
 #icons {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #main-footer {
-    padding: 50px;
-    text-align: center;
+  padding: 50px;
+  text-align: center;
+}
+
+#skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
