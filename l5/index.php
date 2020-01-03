@@ -24,6 +24,21 @@
       };
     </script>
 
+    <div id="menu">
+      <?php
+        if (isset($_COOKIE["username"])) {
+      ?>
+        <button>Logout</button>
+      <?php
+        } else {
+      ?>
+        <button>Register</button>
+        <button>Login</button>
+      <?php
+        }
+      ?>
+    </div>
+
     <main>
       <header id="title">
         <h1>Zakamarki Kryptografii</h1>
