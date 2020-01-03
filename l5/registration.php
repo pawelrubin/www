@@ -14,7 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   
   if ($stmt->execute()) {
     setcookie("username", $username, time() + 60*5);
+    header("Location: /index.php");
   }
+  echo "registration error.";
 }
 ?>
 

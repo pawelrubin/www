@@ -28,12 +28,19 @@
       <?php
         if (isset($_COOKIE["username"])) {
       ?>
-        <button>Logout</button>
+        <p>Welcome <?= $_COOKIE["username"] ?></p>
+        <form action="logout.php">
+          <input type="submit" value="Logout"/>
+        </form>
       <?php
         } else {
       ?>
-        <button>Register</button>
-        <button>Login</button>
+        <form action="registration.php">
+          <input type="submit" value="Register"/>
+        </form>
+        <form action="login.php">
+          <input type="submit" value="Login"/>
+        </form>
       <?php
         }
       ?>
