@@ -125,16 +125,16 @@ For $i$ from $1$ to $t$ do
         </ul>
       </p>
       <p>
-        <b>Definicja.</b> Niec $n \geq 3$ będzie liczbą nieparzystą, a jej rozkład na czynniki pierwsze to $n =
+        <b>Definicja.</b> Niech $n \geqslant 3$ będzie liczbą nieparzystą, a jej rozkład na czynniki pierwsze to $n =
         p^{e_1}_1 p^{e_2}_2 \ldots p^{e_k}_k$. <i>Symbol Jacobiego</i> $\left( \frac{a}{n} \right)$ jest
         zdefiniowany
         jako:
-        $$\left( \frac{a}{n} \right) = \left( \frac{a}{p_1} \right)^{e_1} \left( \frac{a}{p_2} \right)^{e_2} \ldots
+        $$\bigg( \frac{a}{n} \bigg) = \left( \frac{a}{p_1} \right)^{e_1} \left( \frac{a}{p_2} \right)^{e_2} \ldots
         \left( \frac{a}{p_k} \right)^{e_k} $$
         Jeżeli $n$ jest liczbą pierwszą, to symbol Jacobiego jest symbolem Legendre'a.
       </p>
       <p>
-        <b>Własności symbolu Jacobiego.</b> Niech $a, b \in \mathbb{Z}$, zaś $m, n \geq 3$ to nieparzyste liczby
+        <b>Własności symbolu Jacobiego.</b> Niech $a, b \in \mathbb{Z}$, zaś $m, n \geqslant 3$ to nieparzyste liczby
         całkowite. Wówczas:
         <ul>
           <li>$\left( \frac{a}{n} \right) = 0, 1$, albo -1. Ponadto $\left( \frac{a}{n} \right) = 0 \iff gcd(a, n)
@@ -150,14 +150,14 @@ For $i$ from $1$ to $t$ do
         Z własności symbolu Jacobiego wynika, że jeżeli $n$ nieparzyste oraz $a$ nieparzyste i w postaci $a = 2^e
         a_1$,
         gdzie $a_1$ też nieparzyste to:
-        $$\left( \frac{a}{n} \right) = \left( \frac{2^e}{n} \right) \left( \frac{a_1}{n} \right) = \left(
+        $$\bigg( \frac{a}{n} \bigg) = \left( \frac{2^e}{n} \right) \bigg( \frac{a_1}{n} \bigg) = \left(
         \frac{2}{n}
         \right)^e \left( \frac{n \mod a_1}{a_1} \right) (-1)^{\frac{(a_1 - 1)(n - 1)}{4}}$$
       </p>
       <p>
         <b>Algorytm obliczania symbolu Jacobiego $\left( \frac{a}{n} \right)$ (i Legendre'a)</b> dla nieparzystej
         liczby
-        całkowitej $n \geq 3$ oraz całkowitego $0 \leq a \le n$
+        całkowitej $n \geqslant 3$ oraz całkowitego $0 \leqslant a < n$
         <pre>JACOBI($a, n$)</pre>
         <ol type='a'>
           <li>
@@ -183,7 +183,7 @@ $s \leftarrow -1$ if $n \equiv 3$ or $5 ($mod$8)$</pre>
           </li>
           <li>
             <pre>If $a_1 = 1$ then return $s$
-Otherwise reurn $s \cdot$JACOBI($n_1, a_1$)</pre>
+Otherwise reurn $s \cdot$JACOBI($a_1, n_1$)</pre>
           </li>
         </ol>
         Algorytm działa w czasie $\mathcal{O}((\lg n)^2)$ operacji bitowych.
@@ -195,7 +195,7 @@ Otherwise reurn $s \cdot$JACOBI($n_1, a_1$)</pre>
         <h2>Schemat progowy $(t, n)$ dzielenia sekretu Shamira</h2>
       </header>
       <p>
-        <b>Cel:</b> Zaufana Trzecia Strona $T$ ma sekret $S \geq 0$, który chce podzielić pomiędzy $n$ uczestników
+        <b>Cel:</b> Zaufana Trzecia Strona $T$ ma sekret $S \geqslant 0$, który chce podzielić pomiędzy $n$ uczestników
         tak,
         aby dowolnych $t$ spośród niech mogło sekret odtworzyć.
       </p>
@@ -207,7 +207,7 @@ Otherwise reurn $s \cdot$JACOBI($n_1, a_1$)</pre>
           <li>$T$ definiuje wielomian nad $\mathbb{Z}_p$:
             $$f(x) = a_0 + \sum^{t-1}_{j = 1} a_jx^j,$$
           </li>
-          <li>Dla $1 \leq i \leq n$ Zaufana Trzecia Strona $T$ wybiera losowo $x_i \in \mathbb{Z}_p$, oblicza:
+          <li>Dla $1 \leqslant i \leqslant n$ Zaufana Trzecia Strona $T$ wybiera losowo $x_i \in \mathbb{Z}_p$, oblicza:
             $S_i =
             f(x_i) \mod p$ i bezpiecznie przekazuje parę $(x_i, S_i)$ uzytkownikowi $P_i$.</li>
         </ul>

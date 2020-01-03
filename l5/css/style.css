@@ -10,7 +10,6 @@ html {
 body {
   font-family: "EB Garamond", serif;
   margin: 0;
-  padding-inline: 50px;
   height: 100%;
   width: 100%;
   scroll-behavior: smooth;
@@ -88,6 +87,8 @@ section > header > h2 {
 }
 
 #main-footer {
-  padding: 50px;
+  padding-block: 50px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
