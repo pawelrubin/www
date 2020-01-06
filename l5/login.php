@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
   $username = $_POST["username"];
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
   while($result = $returned_set->fetchArray(SQLITE3_ASSOC)) {
     if ($result["password"] == $password) {
-      setcookie("username", $username, time() + 5*60);
+      $_SESSION["username"] = $username;
       header("Location: /index.php");
     }
   }

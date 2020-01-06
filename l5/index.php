@@ -1,4 +1,8 @@
-<?php include('counter.php') ?>
+<?php 
+  session_start();
+  include('counter.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
   <head>
@@ -26,9 +30,10 @@
 
     <div id="menu">
       <?php
-        if (isset($_COOKIE["username"])) {
+
+        if (isset($_SESSION["username"])) {
       ?>
-        <p>Welcome <?= $_COOKIE["username"] ?></p>
+        <p>Welcome <?= $_SESSION["username"] ?></p>
         <form action="logout.php">
           <input type="submit" value="Logout"/>
         </form>

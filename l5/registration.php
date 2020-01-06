@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
   $username = $_POST["username"];
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
   $stmt->bindValue(":eml", $email, SQLITE3_TEXT);
   
   if ($stmt->execute()) {
-    setcookie("username", $username, time() + 60*5);
+    $_SESSION["username"] = $username;
     header("Location: /index.php");
   }
   echo "registration error.";
