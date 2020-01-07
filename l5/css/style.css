@@ -77,6 +77,9 @@ nav a {
 
 section {
   padding-block-end: 25px;
+  background-color: #5a352a;
+  margin-block: 25px;
+  padding-inline: 25px;
 }
 
 section > header > h2 {
