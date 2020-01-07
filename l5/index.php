@@ -30,8 +30,8 @@
 
     <div id="menu">
       <?php
-
         if (isset($_SESSION["username"])) {
+          setcookie(session_name(), session_id(), time() + 5 * 60);
       ?>
         <p>Witaj <?= $_SESSION["username"] ?>! </p>
         <form action="logout.php">
@@ -517,7 +517,7 @@
           Odwiedziłeś tę stronę <b><?= $_COOKIE["counter"] ?: 1 ?></b> razy.
         </p>
         <small>
-          Korzystając z tej strony, wyrarzasz zgodę na wykorzystanie plików cookies.
+          Korzystając z tej strony, wyrażasz zgodę na wykorzystanie plików cookies.
         </small>
         <small>
           © Copyright 2019 Paweł Rubin
